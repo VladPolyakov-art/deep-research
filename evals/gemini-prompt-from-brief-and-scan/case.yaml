@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: gemini-prompt-from-brief-and-scan
+expected_outcome: |
+  The project has a brief (a pantry-tracking app for households), a quick competitor scan with a gaps list and a short personas file, both in the shared research-kit format. The user wants a deeper study, has access to Gemini Deep Research, and no web tools are available to the agent. The agent lists research/, reads the brief and both sibling files, picks path B (prompt for the user to paste), and writes research/deep-research-prompt.md: a self-contained prompt with product summary, scope (market, languages, period, competitors), 5 to 7 specific questions tied to this product that dig into the scan's gaps (and test the persona's [assumption] items) without repeating what the scan already says, and an answer format that demands a source and date per claim, facts apart from opinions, and "unknown" where there is none. The prompt file starts with the header block (Skill, Date, Product, Inputs naming the reused sibling files, Tags), carries over the siblings' tags, and research/INDEX.md gets a row for it. It tells the user to paste the prompt into Gemini Deep Research and bring the result back for verification and synthesis. It does not produce research findings, figures or a report itself, and does not claim any research was run.
+context:
+  scaffold_script: place-files.sh

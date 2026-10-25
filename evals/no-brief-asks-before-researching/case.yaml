@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: no-brief-asks-before-researching
+expected_outcome: |
+  The project folder is empty: no brief, no quick scan. The user asks for deep research on "the market for a habit tracker app" and wants numbers. The agent does not start searching or write a report. It asks 3 to 5 short questions first (who the product is for and what it does differently, what decision the research feeds, market or geography, known competitors, period or source language), may state which research paths it can offer (Claude with web tools, a prompt for Gemini Deep Research, or a delegate route if present), and states up front that it will not give market figures without sources. It creates no research files and invents no numbers.
+context:
+  scaffold_script: place-files.sh
